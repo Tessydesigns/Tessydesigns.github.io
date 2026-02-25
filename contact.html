@@ -1,0 +1,114 @@
+ <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact</title>
+  <meta name="description" content="Contact Your Name." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <span class="logo" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-name">Your Name</span>
+          <span class="brand-role">Web Developer</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="projects.html" data-nav="projects">Projects</a>
+        <a href="about.html" data-nav="about">About</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn ghost" id="themeBtn" type="button" aria-label="Toggle theme">
+          🌓 <span class="muted" id="themeLabel">Theme</span>
+        </button>
+        <a class="btn primary" href="contact.html">Hire me</a>
+        <button class="btn hamburger" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+      </div>
+    </div>
+
+    <div class="container mobile-menu" id="mobileMenu" hidden>
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="projects.html" data-nav="projects">Projects</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="contact.html" data-nav="contact">Contact</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <h1>Contact</h1>
+        <p class="muted lead">As a front-end developer, I build forms that validate user input on the client side and open the user’s </p>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container cards-2">
+        <article class="card pad">
+          <h2 class="h2">Direct contact</h2>
+          <p class="muted">Feel free to contact me for collaboration, project opportunities, or front-end development roles.
+             I’m open to discussing new ideas, contributing to projects, and connecting with other developers. You can reach out anytime to start a conversation.
+</p>
+          <div class="tag-row">
+            <span class="tag">orientalbaby55@gmail,com</span>
+            <span class="tag">LinkedIn: /in/Iwu Theresa Omai</span>
+            <span class="tag">GitHub: @Tessydesigns</span>
+          </div>
+          <div class="mt">
+            <a class="btn primary" href="mailto:you@example.com">Email me</a>
+          </div>
+        </article>
+
+        <form class="card pad" id="contactForm" novalidate>
+          <h2 class="h2">Send a message</h2>
+
+          <label for="name">Name</label>
+          <input id="name" name="name" autocomplete="name" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required placeholder="Tell me what you want to build…"></textarea>
+
+          <div id="formError" class="error" role="alert" aria-live="assertive" style="display:none;"></div>
+
+          <div class="actions">
+            <button class="btn primary" type="submit">Send</button>
+            <button class="btn" type="reset">Reset</button>
+          </div>
+
+          <div id="formSuccess" class="success" role="status" aria-live="polite" style="display:none;">
+            ✅ Looks good — opening your email client.
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-row">
+        <div>
+          <strong>Iwu Theresa Omai</strong>
+          <div class="muted small">Building clean, responsive websites.</div>
+        </div>
+        <div class="footer-links">
+          <span class="muted small">© <span id="year"></span></span>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

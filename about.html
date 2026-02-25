@@ -1,0 +1,108 @@
+ <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — About</title>
+  <meta name="description" content="About Your Name." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <span class="logo" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-name">Iwu Theresa Omai</span>
+          <span class="brand-role">Web Developer</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="projects.html" data-nav="projects">Projects</a>
+        <a href="about.html" data-nav="about">About</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn ghost" id="themeBtn" type="button" aria-label="Toggle theme">
+          🌓 <span class="muted" id="themeLabel">Theme</span>
+        </button>
+        <a class="btn primary" href="contact.html">Hire me</a>
+        <button class="btn hamburger" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+      </div>
+    </div>
+
+    <div class="container mobile-menu" id="mobileMenu" hidden>
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="projects.html" data-nav="projects">Projects</a>
+        <a href="about.html" data-nav="about">About</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
+    </div>
+    </header>
+
+    <main id="main">
+    <section class="page-hero">
+        <div class="container">
+        <h1>About me</h1>
+        <p class="muted lead">
+            I’m a front-end developer who builds clean, responsive web interfaces using HTML, CSS, and JavaScript.
+            I enjoy creating interactive features, working with APIs, and turning simple ideas into usable applications like calculators and weather apps.
+            Next, I want to strengthen my JavaScript skills, build a strong portfolio, and move into a junior front-end role where I can work on real-world projects and continue learning.
+
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container cards-2">
+        <article class="card pad">
+          <h2 class="h2">My approach</h2>
+          <p class="muted">
+            My approach as a front-end developer is to start by understanding the problem and the user’s needs before writing any code. 
+            I break features into small, manageable parts and build them step by step using semantic HTML, responsive CSS, and clear JavaScript. 
+            I test frequently in the browser, focus on accessibility and usability, and refine the interface based on feedback.
+             I aim to write clean, maintainable code and continuously improve through practice and learning.
+
+          </p>
+          <div class="tag-row">
+            <span class="tag">Clarity</span>
+            <span class="tag">Consistency</span>
+            <span class="tag">Responsiveness</span>
+            <span class="tag">Clean code</span>
+          </div>
+        </article>
+
+        <article class="card pad">
+          <h2 class="h2">Skills</h2>
+          <ul class="list muted">
+            <li>HTML5, semantic layout</li>
+            <li>CSS Grid, Flexbox</li>
+            <li>JavaScript (DOM, events)</li>
+            <li>Basic accessibility</li>
+            <li>Git</li>
+            <li>GitHub</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-row">
+        <div>
+          <strong>Iwu Theresa Omai</strong>
+          <div class="muted small">Building clean, responsive websites.</div>
+        </div>
+        <div class="footer-links">
+          <span class="muted small">© <span id="year"></span></span>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

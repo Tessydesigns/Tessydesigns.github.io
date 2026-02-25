@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Projects</title>
+  <meta name="description" content="Projects by Your Name." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <span class="logo" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-name">Iwu Theresa Omai</span>
+          <span class="brand-role">Web Developer</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="projects.html" data-nav="projects">Projects</a>
+        <a href="about.html" data-nav="about">About</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn ghost" id="themeBtn" type="button" aria-label="Toggle theme">
+          🌓 <span class="muted" id="themeLabel">Theme</span>
+        </button>
+        <a class="btn primary" href="contact.html">Hire me</a>
+        <button class="btn hamburger" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+      </div>
+    </div>
+
+    <div class="container mobile-menu" id="mobileMenu" hidden>
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="projects.html" data-nav="projects">Projects</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="contact.html" data-nav="contact">Contact</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <h1>Projects</h1>
+        <p class="muted lead">Filter projects and click to open details.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="filters" role="tablist" aria-label="Project filters">
+          <button class="filter active" data-filter="All" role="tab" aria-selected="true">All</button>
+          <button class="filter" data-filter="Web" role="tab" aria-selected="false">Web</button>
+          <button class="filter" data-filter="UI" role="tab" aria-selected="false">UI</button>
+          <button class="filter" data-filter="JavaScript" role="tab" aria-selected="false">JavaScript</button>
+        </div>
+
+        <div class="grid" id="projectGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-row">
+        <div>
+          <strong>Iwu Theresa Omai</strong>
+          <div class="muted small">Building clean, responsive websites.</div>
+        </div>
+        <div class="footer-links">
+          <span class="muted small">© <span id="year"></span>2026</span>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal" role="document">
+      <div class="modal-head">
+        <div>
+          <h3 id="modalTitle">Project</h3>
+          <div class="muted small" id="modalMeta"></div>
+        </div>
+        <button class="btn ghost" id="modalClose" type="button" aria-label="Close">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-shot" aria-hidden="true"></div>
+
+        <h4>Overview</h4>
+        <p class="muted" id="modalOverview"></p>
+
+        <h4>Highlights</h4>
+        <ul class="list muted" id="modalBullets"></ul>
+
+        <div class="tag-row" id="modalTags"></div>
+        <div class="modal-shot" aria-hidden="true"></div>
+
+        <div class="actions mt">
+  <a class="btn primary" id="modalDemo" href="#" target="_blank" rel="noreferrer">Live Demo</a>
+  <a class="btn" id="modalGithub" href="#" target="_blank" rel="noreferrer">GitHub</a>
+  <button class="btn" id="copyBtn" type="button">Copy summary</button>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
