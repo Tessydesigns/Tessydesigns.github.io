@@ -1,4 +1,4 @@
-// ===== EDIT THIS =====
+
 const SITE_EMAIL = "you@example.com"; // change to your email
 
 const projects = [
@@ -57,7 +57,7 @@ const themeLabel = $("#themeLabel");
 function setTheme(theme) {
   document.documentElement.setAttribute("data-theme", theme);
   localStorage.setItem("theme", theme);
-  if (themeLabel) themeLabel.textContent = theme === "dark" ? "Dark" : "Light";
+  if (themeLabel) themeLabel.textContent = theme === "dark" ? "light" : "dark";
 }
 
 const savedTheme = localStorage.getItem("theme");
@@ -66,7 +66,7 @@ else setTheme(window.matchMedia?.("(prefers-color-scheme: dark)")?.matches ? "da
 
 themeBtn?.addEventListener("click", () => {
   const current = document.documentElement.getAttribute("data-theme") || "light";
-  setTheme(current === "dark" ? "light" : "dark");
+  setTheme(current === "light" ? "dark" : "light");
 });
 
 // ===== Mobile Menu =====
@@ -147,7 +147,7 @@ if (projectGrid) {
               <h3>${escapeHtml(p.title)}</h3>
               <div class="muted small">${escapeHtml(p.role)} · ${escapeHtml(p.tools.join(" · "))}</div>
             </div>
-            <span class="pill small">Open</span>
+            
           </div>
           <p class="muted">${escapeHtml(p.overview)}</p>
           <div class="tag-row">${p.categories.map(c => `<span class="tag">${escapeHtml(c)}</span>`).join("")}</div>

@@ -1,13 +1,4 @@
-:root{
-  --bg:#fbfbfc; --panel:#ffffff; --text:#0f1220; --muted:#5a6176;
-  --border:rgba(15,18,32,.14); --shadow:0 16px 40px rgba(15,18,32,.10);
-  --accent:#4f46e5;
-  --max:1120px; --gutter:clamp(16px,4vw,48px);
-  --r-lg:22px; --r-md:16px;
-  --ring:0 0 0 3px rgba(79,70,229,.25);
-  --h1:clamp(34px,5vw,64px);
-  --h2:clamp(22px,3vw,36px);
-}
+
 .hero-bg{
   background-image: url("hero.jpg");
 }
@@ -17,20 +8,40 @@ html[data-theme="dark"]{
   --accent:#8b5cf6;
   --ring:0 0 0 3px rgba(139,92,246,.25);
 }
-
 *{box-sizing:border-box}
-body{
-  margin:0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.65;
-}
+
 a{color:inherit;text-decoration:none}
 a:hover{text-decoration:underline;text-underline-offset:3px}
 .container{width:min(var(--max), calc(100% - var(--gutter)*2)); margin:0 auto}
 .section{padding:clamp(44px,7vw,96px) 0}
 .mt{margin-top:14px}
+/* 1️⃣ Global variables */
+:root {
+  --bg: #fbfbfc;
+  --panel: #ffffff;
+  --text: #0f1220;
+  --muted: #5a6176;
+  --border: rgba(15, 18, 32, 0.14);
+  --shadow: 0 16px 40px rgba(15, 18, 32, 0.10);
+  --accent: #4f46e5;
+  --max: 1120px;
+  --gutter: clamp(16px, 4vw, 48px);
+  --r-lg: 22px;
+  --r-md: 16px;
+  --ring: 0 0 0 3px rgba(79, 70, 229, 0.25);
+  --h1: clamp(34px, 5vw, 64px);
+  --h2: clamp(22px, 3vw, 36px);
+}
+
+/* 2️⃣ Base styles */
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+}
+
 .muted{color:var(--muted)}
 .small{font-size:14px}
 .accent{color:var(--accent)}
