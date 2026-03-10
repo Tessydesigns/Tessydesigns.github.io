@@ -9,9 +9,9 @@
 
 <h2> Projects</h2>
 
-- **Weather App** – A weather application that allows users to search weather conditions by city.
-- **To-Do List** – A task management application for adding, completing, and deleting tasks.
--**simple Calculator app** -A simple web calculator that supports standard arithmetic operations, keyboard input, parentheses, and calculation history.
+<p><strong>Weather App</strong> – A weather application that allows users to search weather conditions by city.</p>
+<p><strong>To-Do List </strong>– A task management application for adding, completing, and deleting tasks.</p>
+<p><strong>simple Calculator app</strong> -A simple web calculator that supports standard arithmetic operations, keyboard input, parentheses, and calculation history.</p>
 
 ## Technologies
 - HTML5
