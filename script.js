@@ -32,7 +32,25 @@ const projects = [
     ],
     github: "https://github.com/Tessydesigns/To-do-list",
     demo: "https://tessydesigns.github.io/To-do-list/"
-  }
+  },
+  {
+  id: "calculator",
+  title: "Web Calculator",
+  categories: ["Web", "JavaScript"],
+  role: "Frontend Developer",
+  tools: ["HTML", "CSS", "JavaScript"],
+  image: "images/calculator.png",
+  overview:
+    "A simple web calculator that performs basic arithmetic operations with a clean and responsive interface.",
+  bullets: [
+    "Performs addition, subtraction, multiplication, and division",
+    "Interactive button-based interface",
+    "Responsive layout for different screen sizes",
+    "Built with vanilla JavaScript"
+  ],
+  github: "https://github.com/Tessydesigns/web-calculator",
+  demo: "https://tessydesigns.github.io/web-calculator/"
+}
 ];
 
 // ===== Helpers =====
