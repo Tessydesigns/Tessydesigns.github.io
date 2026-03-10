@@ -1,12 +1,13 @@
- <!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact</title>
-  <meta name="description" content="Contact Your Name." />
+  <title>IWU THERESA OMAI — Contact</title>
+  <meta name="description" content="Contact IWU THERESA OMAI." />
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -15,7 +16,7 @@
       <a class="brand" href="index.html">
         <span class="logo" aria-hidden="true"></span>
         <span class="brand-text">
-          <span class="brand-name">Your Name</span>
+          <span class="brand-name">Iwu Theresa Omai</span>
           <span class="brand-role">Web Developer</span>
         </span>
       </a>
@@ -48,29 +49,50 @@
     <section class="page-hero">
       <div class="container">
         <h1>Contact</h1>
-        <p class="muted lead">Software developer focused on building practical and scalable solutions. Let’s connect. </p>
+        <p class="muted lead">
+          Software developer focused on building practical and scalable solutions. Let’s connect.
+        </p>
       </div>
     </section>
 
     <section class="section">
       <div class="container cards-2">
+        <!-- Direct contact -->
         <article class="card pad">
           <h2 class="h2">Direct contact</h2>
-          <p class="muted">Feel free to contact me for collaboration, project opportunities, or front-end development roles.
-             I’m open to discussing new ideas, contributing to projects, and connecting with other developers. You can reach out anytime to start a conversation.
-</p>
+          <p class="muted">
+            Feel free to contact me for collaboration, project opportunities, or front-end development roles.
+            I’m open to discussing new ideas, contributing to projects, and connecting with other developers.
+          </p>
+
           <div class="tag-row">
-            <span class="tag">orientalbaby55@gmail,com</span>
-            <span class="tag">LinkedIn: /in/Iwu Theresa Omai</span>
-            <span class="tag">GitHub: @Tessydesigns</span>
+            <span class="tag">Email: omaitheresa2@gmail.com</span>
+            <span class="tag">LinkedIn: theresa-omai-iwu-6408342b8</span>
+            <span class="tag">Website: tessydesigns.github.io</span>
           </div>
+
           <div class="mt">
-            <a class="btn primary" href="mailto:you@example.com">Email me</a>
+            <a class="btn primary" href="mailto:omaitheresa2@gmail.com">Email me</a>
           </div>
         </article>
 
-        <form class="card pad" id="contactForm" novalidate>
+        <!-- FormSubmit form -->
+        <form class="card pad"
+              action="https://formsubmit.co/omaitheresa2@gmail.com"
+              method="POST">
+
           <h2 class="h2">Send a message</h2>
+
+          <!-- FormSubmit settings -->
+          <input type="hidden" name="_subject" value="New message from IWU THERESA OMAI portfolio">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+
+          <!-- Optional redirect after submit (create thankyou.html if you use this) -->
+          <!-- <input type="hidden" name="_next" value="https://tessydesigns.github.io/thankyou.html"> -->
+
+          <!-- Honeypot (spam trap) -->
+          <input type="text" name="_honey" style="display:none">
 
           <label for="name">Name</label>
           <input id="name" name="name" autocomplete="name" required />
@@ -81,15 +103,13 @@
           <label for="message">Message</label>
           <textarea id="message" name="message" required placeholder="Tell me what you want to build…"></textarea>
 
-          <div id="formError" class="error" role="alert" aria-live="assertive" style="display:none;"></div>
-
           <div class="actions">
             <button class="btn primary" type="submit">Send</button>
             <button class="btn" type="reset">Reset</button>
           </div>
 
-          <div id="formSuccess" class="success" role="status" aria-live="polite" style="display:none;">
-            ✅ Looks good — opening your email client.
+          <div class="muted small" style="margin-top:10px;">
+            Typically replies within 24–48 hours.
           </div>
         </form>
       </div>

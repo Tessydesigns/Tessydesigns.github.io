@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Iwu Theresa Omai — Projects</title>
-  <meta name="description" content="Projects by Your Name." />
+  <meta name="description" content="Projects by Iwu Theresa Omai." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -31,7 +31,7 @@
         <button class="btn ghost" id="themeBtn" type="button" aria-label="Toggle theme">
           🌓 <span class="muted" id="themeLabel">Theme</span>
         </button>
-        <a class="btn primary" href="contact.html">Hire me</a>
+        <a class="btn primary" href="contact.html">Hire Me</a>
         <button class="btn hamburger" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu">☰</button>
       </div>
     </div>
@@ -45,10 +45,10 @@
   </header>
 
   <main id="main">
-    <section class="page-hero">
+    <section class="page-hero section">
       <div class="container">
         <h1>Projects</h1>
-        <p class="muted lead">Filter projects and click to open details.</p>
+        <p class="muted lead">Browse my work and use the Live Demo or GitHub buttons to explore each project.</p>
       </div>
     </section>
 
@@ -64,52 +64,19 @@
         <div class="grid" id="projectGrid" aria-live="polite"></div>
       </div>
     </section>
-
-    <footer class="footer">
-      <div class="container footer-row">
-        <div>
-          <strong>Iwu Theresa Omai</strong>
-          <div class="muted small">Building clean, responsive websites.</div>
-        </div>
-        <div class="footer-links">
-          <span class="muted small">© <span id="year"></span>2026</span>
-        </div>
-      </div>
-    </footer>
   </main>
 
-  <!-- Modal -->
-  <div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal" role="document">
-      <div class="modal-head">
-        <div>
-          <h3 id="modalTitle">Project</h3>
-          <div class="muted small" id="modalMeta"></div>
-        </div>
-        <button class="btn ghost" id="modalClose" type="button" aria-label="Close">✕</button>
+  <footer class="footer">
+    <div class="container footer-row">
+      <div>
+        <strong>Iwu Theresa Omai</strong>
+        <div class="muted small">Building clean, responsive websites.</div>
       </div>
-
-      <div class="modal-body">
-        <div class="modal-shot" aria-hidden="true"></div>
-
-        <h4>Overview</h4>
-        <p class="muted" id="modalOverview"></p>
-
-        <h4>Highlights</h4>
-        <ul class="list muted" id="modalBullets"></ul>
-
-        <div class="tag-row" id="modalTags"></div>
-        <div class="modal-shot" aria-hidden="true"></div>
-
-        <div class="actions mt">
-  <a class="btn primary" id="modalDemo" href="#" target="_blank" rel="noreferrer">Live Demo</a>
-  <a class="btn" id="modalGithub" href="#" target="_blank" rel="noreferrer">GitHub</a>
-  <button class="btn" id="copyBtn" type="button">Copy summary</button>
-</div>
-        </div>
+      <div class="footer-links">
+        <span class="muted small">© <span id="year"></span></span>
       </div>
     </div>
-  </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
