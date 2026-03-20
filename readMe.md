@@ -12,6 +12,10 @@
 <p><strong>Weather App</strong> – A weather application that allows users to search weather conditions by city.</p>
 <p><strong>To-Do List </strong>– A task management application for adding, completing, and deleting tasks.</p>
 <p><strong>simple Calculator app</strong> -A simple web calculator that supports standard arithmetic operations, keyboard input, parentheses, and calculation history.</p>
+<P>This project is a RESTful API built using Node.js and Express.js to manage student records.
+It supports CRUD operations, filtering and sorting, middleware for logging and validation, JWT-based authentication, and MongoDB for persistent data storage.
+The project demonstrates how to build a structured and secure backend system using real-world development practices.</p>
+  
 
 ## Technologies
 - HTML5
@@ -20,6 +24,13 @@
 - Git & GitHub
 - GitHub Pages
 - FormSubmit (contact form)
+- Node.js
+- Express.js
+- Mongoose
+- MongoDB
+- Bcrypt
+- JWT
+
 
 ## Contact
 Email: omaitheresa2@gmail.com  

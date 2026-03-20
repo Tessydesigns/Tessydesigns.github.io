@@ -3,11 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>IWU THERESA OMAI — Contact</title>
-  <meta name="description" content="Contact IWU THERESA OMAI." />
+  <title>Iwu Theresa Omai — Contact</title>
+  <meta name="description" content="Contact Iwu Theresa Omai." />
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -32,8 +31,10 @@
         <button class="btn ghost" id="themeBtn" type="button" aria-label="Toggle theme">
           🌓 <span class="muted" id="themeLabel">Theme</span>
         </button>
-        <a class="btn primary" href="contact.html">Hire me</a>
-        <button class="btn hamburger" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+        <a class="btn primary" href="contact.html">Hire Me</a>
+        <button class="btn hamburger" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu">
+          ☰
+        </button>
       </div>
     </div>
 
@@ -46,7 +47,7 @@
   </header>
 
   <main id="main">
-    <section class="page-hero">
+    <section class="page-hero section">
       <div class="container">
         <h1>Contact</h1>
         <p class="muted lead">
@@ -57,48 +58,45 @@
 
     <section class="section">
       <div class="container cards-2">
-        <!-- Direct contact -->
         <article class="card pad">
           <h2 class="h2">Direct contact</h2>
           <p class="muted">
-            Feel free to contact me for collaboration, project opportunities, or front-end development roles.
+            Feel free to contact me for collaboration, project opportunities, or frontend development roles.
             I’m open to discussing new ideas, contributing to projects, and connecting with other developers.
           </p>
 
-          <div class="tag-row">
-            <span class="tag">Email: omaitheresa2@gmail.com</span>
-            <span class="tag">LinkedIn: theresa-omai-iwu-6408342b8</span>
-            <span class="tag">Website: tessydesigns.github.io</span>
-          </div>
-
-          <div class="mt">
-            <a class="btn primary" href="mailto:omaitheresa2@gmail.com">Email me</a>
+          <div class="contact-links">
+            <a class="contact-link" href="mailto:omaitheresa2@gmail.com">
+              <span>📧</span> omaitheresa2@gmail.com
+            </a>
+            <a class="contact-link" href="https://www.linkedin.com/in/theresa-omai-iwu-6408342b8" target="_blank" rel="noreferrer">
+              <span>💼</span> LinkedIn
+            </a>
+            <a class="contact-link" href="https://github.com/Tessydesigns" target="_blank" rel="noreferrer">
+              <span>💻</span> GitHub
+            </a>
+            <a class="contact-link" href="https://tessydesigns.github.io" target="_blank" rel="noreferrer">
+              <span>🌐</span> Portfolio
+            </a>
           </div>
         </article>
 
-        <!-- FormSubmit form -->
         <form class="card pad"
               action="https://formsubmit.co/omaitheresa2@gmail.com"
               method="POST">
 
           <h2 class="h2">Send a message</h2>
 
-          <!-- FormSubmit settings -->
-          <input type="hidden" name="_subject" value="New message from IWU THERESA OMAI portfolio">
+          <input type="hidden" name="_subject" value="New Portfolio Message">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_captcha" value="false">
-
-          <!-- Optional redirect after submit (create thankyou.html if you use this) -->
-          <!-- <input type="hidden" name="_next" value="https://tessydesigns.github.io/thankyou.html"> -->
-
-          <!-- Honeypot (spam trap) -->
           <input type="text" name="_honey" style="display:none">
 
           <label for="name">Name</label>
-          <input id="name" name="name" autocomplete="name" required />
+          <input id="name" name="name" required>
 
           <label for="email">Email</label>
-          <input id="email" name="email" type="email" autocomplete="email" required />
+          <input id="email" name="email" type="email" required>
 
           <label for="message">Message</label>
           <textarea id="message" name="message" required placeholder="Tell me what you want to build…"></textarea>
@@ -108,25 +106,32 @@
             <button class="btn" type="reset">Reset</button>
           </div>
 
-          <div class="muted small" style="margin-top:10px;">
+          <p class="muted small" style="margin-top:10px;">
             Typically replies within 24–48 hours.
-          </div>
+          </p>
         </form>
       </div>
     </section>
-
-    <footer class="footer">
-      <div class="container footer-row">
-        <div>
-          <strong>Iwu Theresa Omai</strong>
-          <div class="muted small">Building clean, responsive websites.</div>
-        </div>
-        <div class="footer-links">
-          <span class="muted small">© <span id="year"></span></span>
-        </div>
-      </div>
-    </footer>
   </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <div>
+        <strong>Iwu Theresa Omai</strong>
+        <div class="muted small">Building clean, responsive websites.</div>
+      </div>
+
+      <div class="social-icons">
+        <a href="mailto:omaitheresa2@gmail.com" aria-label="Email">📧</a>
+        <a href="https://github.com/Tessydesigns" target="_blank" rel="noreferrer" aria-label="GitHub">💻</a>
+        <a href="https://www.linkedin.com/in/theresa-omai-iwu-6408342b8" target="_blank" rel="noreferrer" aria-label="LinkedIn">💼</a>
+      </div>
+
+      <div class="footer-links">
+        <span class="muted small">© <span id="year"></span></span>
+      </div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>

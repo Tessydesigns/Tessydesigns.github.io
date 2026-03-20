@@ -1,3 +1,6 @@
+// =========================
+// PROJECT DATA
+// =========================
 const projects = [
   {
     id: "weather-app",
@@ -5,16 +8,9 @@ const projects = [
     categories: ["Web", "JavaScript"],
     role: "Frontend Developer",
     tools: ["HTML", "CSS", "JavaScript"],
-    overview:
-      "A weather application with city search and geolocation support showing current weather and forecast.",
-    bullets: [
-      "City search + current location support",
-      "Displays temperature, wind, humidity",
-      "7-day forecast",
-      "Responsive layout"
-    ],
-    github: "https://github.com/Tessydesigns/weather-app",
-    demo: "https://tessydesigns.github.io/weather-app/"
+    overview: "A weather application with city search and geolocation support showing current weather and forecast.",
+    demo: "https://tessydesigns.github.io/weather-app/",
+    github: "https://github.com/Tessydesigns/weather-app"
   },
   {
     id: "todo-list",
@@ -22,43 +18,51 @@ const projects = [
     categories: ["Web", "JavaScript"],
     role: "Frontend Developer",
     tools: ["HTML", "CSS", "JavaScript"],
-    overview:
-      "A task manager app allowing users to add, complete, delete, and filter tasks.",
-    bullets: [
-      "Add / complete / delete tasks",
-      "Filter tasks (All / Active / Completed)",
-      "Data saved using localStorage",
-      "Mobile-friendly UI"
-    ],
-    github: "https://github.com/Tessydesigns/To-do-list",
-    demo: "https://tessydesigns.github.io/To-do-list/"
+    overview: "A task manager app allowing users to add, complete, delete, and filter tasks.",
+    demo: "https://tessydesigns.github.io/To-do-list/",
+    github: "https://github.com/Tessydesigns/To-do-list"
   },
   {
-  id: "calculator",
-  title: "Web Calculator",
-  categories: ["Web", "JavaScript"],
-  role: "Frontend Developer",
-  tools: ["HTML", "CSS", "JavaScript"],
-  image: "images/calculator.png",
-  overview:
-    "A simple web calculator that performs basic arithmetic operations with a clean and responsive interface.",
-  bullets: [
-    "Performs addition, subtraction, multiplication, and division",
-    "Interactive button-based interface",
-    "Responsive layout for different screen sizes",
-    "Built with vanilla JavaScript"
-  ],
-  github: "https://github.com/Tessydesigns/web-calculator",
-  demo: "https://tessydesigns.github.io/web-calculator/"
-}
+    id: "calculator",
+    title: "Web Calculator",
+    categories: ["Web", "JavaScript"],
+    role: "Frontend Developer",
+    tools: ["HTML", "CSS", "JavaScript"],
+    overview: "A simple web calculator that performs basic arithmetic operations with a clean and responsive interface.",
+    demo: "https://tessydesigns.github.io/web-calculator/",
+    github: "https://github.com/Tessydesigns/web-calculator"
+  },
+  {
+    id: "building-apis",
+    title: "student-management-APIs",
+    categories: ["Web", "Node.js", "Express.js"],
+    role: "Backend Developer",
+    tools: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "dotenv",
+      "Mongoose",
+      "jsonwebtoken",
+      "bcryptjs",
+      "Nodemon",
+      "Thunder Client"
+    ],
+    overview: `This project is a RESTful API built using Node.js and Express.js to manage student records.
+It supports CRUD operations, filtering and sorting, middleware for logging and validation, JWT-based authentication, and MongoDB for persistent data storage.
+The project demonstrates how to build a structured and secure backend system using real-world development practices.`,
+    demo: "https://tessydesigns.github.io/student-management-APIs/",
+    github: "https://github.com/Tessydesigns/student-management-APIs"
+  }
 ];
-
-// ===== Helpers =====
+// =========================
+// HELPERS
+// =========================
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
 
-function escapeHtml(value) {
-  return String(value)
+function escapeHtml(str) {
+  return String(str)
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
@@ -66,7 +70,9 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
-// ===== Theme =====
+// =========================
+// THEME TOGGLE
+// =========================
 const themeBtn = $("#themeBtn");
 const themeLabel = $("#themeLabel");
 
@@ -74,7 +80,7 @@ function setTheme(theme) {
   document.documentElement.setAttribute("data-theme", theme);
   localStorage.setItem("theme", theme);
   if (themeLabel) {
-    themeLabel.textContent = theme === "dark" ? "light" : "dark";
+    themeLabel.textContent = theme === "dark" ? "Dark" : "Light";
   }
 }
 
@@ -88,95 +94,139 @@ if (savedTheme) {
 
 themeBtn?.addEventListener("click", () => {
   const current = document.documentElement.getAttribute("data-theme") || "light";
-  setTheme(current === "light" ? "dark" : "light");
+  setTheme(current === "dark" ? "light" : "dark");
 });
 
-// ===== Mobile Menu =====
+// =========================
+// MOBILE MENU
+// =========================
 const menuBtn = $("#menuBtn");
 const mobileMenu = $("#mobileMenu");
 
-function closeMobile() {
+function closeMobileMenu() {
   if (!mobileMenu) return;
   mobileMenu.hidden = true;
   menuBtn?.setAttribute("aria-expanded", "false");
 }
 
 menuBtn?.addEventListener("click", () => {
-  if (!mobileMenu) return;
   const willOpen = mobileMenu.hidden;
   mobileMenu.hidden = !willOpen;
   menuBtn?.setAttribute("aria-expanded", String(willOpen));
 });
 
-$$(".mobile-menu a").forEach((link) => {
-  link.addEventListener("click", closeMobile);
+$$(".mobile-menu a").forEach(link => {
+  link.addEventListener("click", closeMobileMenu);
 });
 
-// ===== Active nav highlight =====
-(function highlightNav() {
+// =========================
+// ACTIVE NAV LINK
+// =========================
+(function highlightCurrentPage() {
   const file = (location.pathname.split("/").pop() || "index.html").toLowerCase();
 
-  const currentPage =
-    file.includes("projects") ? "projects" :
-    file.includes("about") ? "about" :
-    file.includes("contact") ? "contact" :
-    "home";
+  let current = "home";
+  if (file.includes("projects")) current = "projects";
+  else if (file.includes("about")) current = "about";
+  else if (file.includes("contact")) current = "contact";
 
-  $$("[data-nav]").forEach((link) => {
-    link.classList.toggle("active", link.getAttribute("data-nav") === currentPage);
+  $$("[data-nav]").forEach(link => {
+    const isActive = link.getAttribute("data-nav") === current;
+    link.classList.toggle("active", isActive);
   });
 })();
 
-// ===== Footer year =====
+// =========================
+// FOOTER YEAR
+// =========================
 const yearEl = $("#year");
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
-// ===== Featured projects on Home =====
+// =========================
+// PROJECT CARD TEMPLATE
+// =========================
 function projectCardHTML(project) {
-  const categories = project.categories
-    .map((item) => `<span class="tag">${escapeHtml(item)}</span>`)
-    .join("");
-
-  const tools = project.tools
-    .slice(0, 3)
-    .map((item) => `<span class="tag">${escapeHtml(item)}</span>`)
+  const tags = project.categories
+    .map(category => `<span class="tag">${escapeHtml(category)}</span>`)
     .join("");
 
   return `
     <article class="card">
-      <div class="thumb" role="img" aria-label="${escapeHtml(project.title)} preview"></div>
+      <img class="thumb" src="${escapeHtml(project.image)}" alt="${escapeHtml(project.title)} screenshot">
+
       <div class="card-body">
         <div class="card-top">
           <div>
             <h3>${escapeHtml(project.title)}</h3>
-            <div class="muted small">
-              ${escapeHtml(project.role)} · ${escapeHtml(project.tools.join(" · "))}
-            </div>
+            <div class="muted small">${escapeHtml(project.role)} · ${escapeHtml(project.tools.join(" · "))}</div>
           </div>
-          <span class="pill small">New</span>
         </div>
-        <p class="muted">${escapeHtml(project.overview)}</p>
-        <div class="tag-row">${categories}</div>
-        <div class="tag-row">${tools}</div>
-        <div class="actions mt">
-          <a class="btn primary" href="${project.demo}" target="_blank" rel="noreferrer">Live Demo</a>
-          <a class="btn" href="${project.github}" target="_blank" rel="noreferrer">GitHub</a>
+
+        <p class="muted small">${escapeHtml(project.overview)}</p>
+
+        <div class="tag-row">${tags}</div>
+
+        <div class="actions">
+          <a class="btn primary" href="${escapeHtml(project.demo)}" target="_blank" rel="noreferrer">Live Demo</a>
+          <a class="btn" href="${escapeHtml(project.github)}" target="_blank" rel="noreferrer">GitHub</a>
         </div>
       </div>
     </article>
   `;
 }
 
+// =========================
+// HOMEPAGE FEATURED PROJECTS
+// =========================
 const featuredGrid = $("#featuredGrid");
 if (featuredGrid) {
   featuredGrid.innerHTML = projects.slice(0, 2).map(projectCardHTML).join("");
 }
 
-// ===== Projects page =====
+// =========================
+// PROJECTS PAGE RENDER
+// =========================
 const projectGrid = $("#projectGrid");
+const filterButtons = $$(".filter");
 
+function renderProjects(filter = "All") {
+  if (!projectGrid) return;
+
+  const filteredProjects =
+    filter === "All"
+      ? projects
+      : projects.filter(project => project.categories.includes(filter));
+
+  if (!filteredProjects.length) {
+    projectGrid.innerHTML = `<p class="muted">No projects found.</p>`;
+    return;
+  }
+
+  projectGrid.innerHTML = filteredProjects.map(projectCardHTML).join("");
+}
+
+if (projectGrid) {
+  renderProjects();
+
+  filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      filterButtons.forEach(btn => {
+        btn.classList.remove("active");
+        btn.setAttribute("aria-selected", "false");
+      });
+
+      button.classList.add("active");
+      button.setAttribute("aria-selected", "true");
+
+      renderProjects(button.dataset.filter || "All");
+    });
+  });
+}
+
+
+// ===== Projects page =====
 if (projectGrid) {
   function renderProjects(filter = "All") {
     const list =
@@ -285,4 +335,7 @@ if (form) {
     showSuccess("Your message looks good and is ready to send.");
     form.reset();
   });
+}
+function goBack() {
+  window.history.back();
 }

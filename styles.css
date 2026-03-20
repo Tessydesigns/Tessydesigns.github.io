@@ -577,3 +577,83 @@ textarea {
   gap: 12px;
   flex-wrap: wrap;
 }
+.contact-links{
+  display:grid;
+  gap:12px;
+  margin-top:16px;
+}
+
+.contact-link{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 14px;
+  border:1px solid var(--border);
+  border-radius:14px;
+  background:color-mix(in oklab, var(--panel) 92%, transparent);
+  color:var(--text);
+  transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+
+.contact-link:hover{
+  text-decoration:none;
+  transform:translateY(-1px);
+  box-shadow:var(--shadow);
+  border-color:color-mix(in oklab, var(--accent) 35%, var(--border));
+}
+
+.contact-link span{
+  color:var(--muted);
+}
+
+.social-icons{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.social-icons a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:42px;
+  height:42px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:var(--panel);
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+
+.social-icons a:hover{
+  text-decoration:none;
+  transform:translateY(-1px);
+  box-shadow:var(--shadow);
+}
+.return-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  padding: 10px 14px;
+  border-radius: 14px;
+
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 1000;
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.return-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
