@@ -5,7 +5,7 @@
 🔗 Live Site: https://tessydesigns.github.io
 
 <h2>About</h2>
-<p>This portfolio highlights my work as a frontend developer, demonstrating my ability to build responsive and user-friendly websites using modern web technologies.</p>
+<p>This portfolio highlights my work as a Full-stack developer, demonstrating my ability to build responsive and user-friendly websites using modern web technologies.</p>
 
 <h2> Projects</h2>
 
