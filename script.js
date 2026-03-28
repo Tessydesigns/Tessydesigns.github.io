@@ -80,7 +80,7 @@ function setTheme(theme) {
   document.documentElement.setAttribute("data-theme", theme);
   localStorage.setItem("theme", theme);
   if (themeLabel) {
-    themeLabel.textContent = theme === "dark" ? "Dark" : "Light";
+    themeLabel.textContent = theme === "light" ? "Dark" : "Light";
   }
 }
 
