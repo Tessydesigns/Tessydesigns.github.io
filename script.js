@@ -53,7 +53,17 @@ It supports CRUD operations, filtering and sorting, middleware for logging and v
 The project demonstrates how to build a structured and secure backend system using real-world development practices.`,
     demo: "https://tessydesigns.github.io/student-management-APIs/",
     github: "https://github.com/Tessydesigns/student-management-APIs"
-  }
+  },
+  {
+    id: "Medication Reminder",
+    title: "Medication-reminder-Application",
+    categories: ["Web", "JavaScript"],
+    role: "Frontend Developer",
+    tools: ["HTML", "CSS", "JavaScript"],
+    overview: "A Medication reminder app, that indicates time in which medication is taken after being prescribed by the Primary health personnel with a clean and responsive interface.",
+    demo: "https://tessydesigns.github.io/Medication-reminder-Application/",
+    github: "https://github.com/Tessydesigns/Medication-reminder-Application"
+  },
 ];
 // =========================
 // HELPERS
